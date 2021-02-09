@@ -1,0 +1,3 @@
+Bij de ingebouwde edge detection is er geen ruis en zijn de edges gehighlight als wit.
+De definitie van een edge lijkt ook strakker te zijn, aangezien verschillende edges die wel gezien worden door de edge detection masks niet worden opgevangen.
+Dit is goed te zien in de mouw van de man, waar de edges niet worden gezien in de build in detection methoden.
