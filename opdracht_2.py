@@ -18,15 +18,17 @@ def opdracht_2_1(image):
 
     #edging
     #horizontal edge
-    edge_mask1 = [[-1,0,1], [-1,0,1], [-1,0,1]]
+    edge_mask1 = [[-4,0,4], [-4,0,4], [-4,0,4]]
     #vertical edge
-    edge_mask2 = [[-1,-1,-1], [0,0,0], [1,1,1]]
+    edge_mask2 = [[-1,-2,-1], [0,0,0], [1,2,1]]
     # diagonal edge towards the north east
     edge_mask3 = [[-3,-3,-3], [-3,0,5], [-3,5,5]]
+
     edgeimage1 = scipy.ndimage.convolve(image, edge_mask1)
     edgeimage2 = scipy.ndimage.convolve(image, edge_mask2)
     edgeimage3 = scipy.ndimage.convolve(image, edge_mask3)
 
+    #show the edge detection
     viewer = ImageViewer(edgeimage1)
     viewer.show()
 
@@ -67,7 +69,7 @@ def main():
     #viewer = ImageViewer(image)
     #viewer.show()
     print('Give the exercise or all:')
-    excerise = "3"
+    excerise = input()
     if excerise == "1":
         opdracht_2_1(image)
     elif excerise == "2":

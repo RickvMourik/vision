@@ -6,11 +6,8 @@ import numpy as np
 import random
 
 digits = datasets.load_digits()
-print(digits.data)
-print(digits.target)
 
 clf = svm.SVC(gamma=0.001, C=100)
-
 # get random indexes
 potential_indexes = list(range(len(digits.data)))
 train_indexes = random.sample(potential_indexes, k = int(len(digits.data) *2/3))
